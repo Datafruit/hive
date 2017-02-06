@@ -119,7 +119,7 @@ public class DruidRecordWriter implements RecordWriter<NullWritable, DruidWritab
    *
    * @return segmentIdentifier with of the truncatedTime and maybe push the current open segment.
    */
-  private SegmentIdentifier getSegmentIdentifierAndMaybePush(long truncatedTime) {
+  protected SegmentIdentifier getSegmentIdentifierAndMaybePush(long truncatedTime) {
 
     final Granularity segmentGranularity = dataSchema.getGranularitySpec()
             .getSegmentGranularity();
